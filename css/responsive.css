@@ -1,0 +1,274 @@
+/* ===== TABLET (768px e abaixo) ===== */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .quote-summary {
+    order: -1; /* Mostra resumo antes do formulário */
+    display: grid;
+    min-height: 120px; /* Altura mínima mais flexível */
+    padding: var(--space-md);
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "logo_img titulo_resumo"
+      "resumo resumo";
+    gap: var(--space-sm) var(--space-md);
+    align-items: start;
+  }
+
+  #company-logo {
+    order: -1;
+    transform: translate(0);
+    grid-area: logo_img;
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+
+  aside .cabecalho {
+    display: contents; /* Remove o flex container */
+  }
+
+  aside .cabecalho h2 {
+    padding: 0;
+    margin: 0;
+    grid-area: titulo_resumo;
+    align-self: center;
+    font-size: var(--font-lg);
+  }
+
+  .quote-summary h3 {
+    display: none; /* Remove o h3 duplicado */
+  }
+
+  .summary-content {
+    grid-area: resumo;
+    flex-direction: row;
+    align-self: start;
+  }
+
+  .summary-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+/* ===== MOBILE (650px e abaixo) ===== */
+@media (max-width: 650px) {
+  /* Container e espaçamentos */
+  .container {
+    padding: var(--space-sm);
+    padding-top: calc(var(--header-height) + var(--space-lg));
+  }
+  
+  .quote-form {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  /* Quote Summary mais compacto */
+  .quote-summary {
+    min-height: 100px;
+    padding: var(--space-sm);
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-sm);
+  }
+
+  #company-logo {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  aside .cabecalho h2 {
+    font-size: var(--font-base);
+  }
+
+  .summary-content {
+    font-size: 0.875rem;
+  }
+  
+  /* Tipografia */
+  h1 {
+    font-size: var(--font-lg);
+    margin: var(--space-lg) 0 var(--space-md) 0;
+  }
+  
+  h2 {
+    font-size: var(--font-lg);
+  }
+  
+  /* Botões */
+  .btn,
+  button {
+    font-size: 0.875rem;
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Inputs de serviço */
+  .service-input-row.inline-fields {
+    flex-direction: column;
+  }
+  
+  .service-input-row.inline-fields input {
+    text-align: left;
+  }
+  
+  .add_servico_container {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: stretch;
+  }
+  
+  #total-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Tabelas */
+  table {
+    font-size: 0.8rem;
+  }
+  
+  th, td {
+    padding: 4px 2px;
+  }
+}
+
+/* ===== MOBILE PEQUENO (400px e abaixo) ===== */
+@media (max-width: 400px) {
+  /* Quote Summary ultra compacto */
+  .quote-summary {
+    min-height: 80px;
+    padding: var(--space-xs);
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+      "logo_img titulo_resumo"
+      "logo_img resumo";
+  }
+
+  #company-logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  aside .cabecalho h2 {
+    font-size: 0.9rem;
+  }
+
+  .summary-content {
+    font-size: 0.8rem;
+  }
+
+  /* Tipografia ainda menor */
+  h1, h2 {
+    font-size: 1.1rem;
+  }
+  
+  /* Container mais compacto */
+  .container {
+    padding: 4px;
+    padding-top: calc(var(--header-height) + var(--space-md));
+  }
+  
+  .quote-form {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  /* Botões menores */
+  .btn,
+  button {
+    font-size: 0.8rem;
+    padding: 6px var(--space-md);
+  }
+  
+  /* Inputs mais compactos */
+  input,
+  textarea {
+    padding: 6px var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+  
+  /* Tabela mais compacta */
+  table {
+    font-size: 0.75rem;
+  }
+  
+  th, td {
+    padding: 2px 1px;
+  }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .app-header {
+    margin-bottom: var(--space-sm);
+  }
+  
+  h1 {
+    font-size: var(--font-base);
+    margin: var(--space-sm) 0;
+  }
+  
+  .quote-form {
+    padding: var(--space-md);
+  }
+
+  /* Quote Summary em landscape */
+  .quote-summary {
+    min-height: 60px;
+    padding: var(--space-sm);
+  }
+
+  #company-logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+/* ===== DESKTOP GRANDE (1200px e acima) ===== */
+@media (min-width: 1200px) {
+  .container {
+    padding: var(--space-lg);
+    padding-top: calc(var(--header-height) + var(--space-xl));
+  }
+  
+  .main-content {
+    gap: var(--space-xl);
+  }
+  
+  .quote-form {
+    max-width: 600px;
+  }
+  
+  /* Quote Summary mais espaçoso em desktop */
+  .quote-summary {
+    padding: var(--space-lg);
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .app-header,
+  .app-footer,
+  .quote-summary,
+  .form-actions {
+    display: none;
+  }
+  
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-form {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}

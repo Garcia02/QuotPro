@@ -1,0 +1,254 @@
+/* ===== CARDS E FORMULÁRIOS ===== */
+.quote-form {
+  background: var(--bg-card);
+  max-width: 540px;
+  margin: auto;
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea{
+  display: block;
+  width: 100%;
+  font-size: var(--font-base);
+  margin-bottom: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  transition: border-color 0.2s;
+  color: var(--text);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ===== BOTÕES ===== */
+.btn,
+button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius);
+  font-size: var(--font-base);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover,
+button:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background: #375b84;
+}
+
+.btn-danger {
+  background: var(--danger);
+  padding: 4px var(--space-sm);
+  font-size: 0.875rem;
+}
+
+.btn-danger:hover {
+  background: #e74c3c;
+}
+
+.btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===== AÇÕES DO FORMULÁRIO ===== */
+.form-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+/* ===== SEÇÃO DE SERVIÇOS ===== */
+#inputs-servico {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.service-input-row {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.service-input-row:last-child {
+  margin-bottom: 0;
+}
+
+.service-input-row.full-width input {
+  margin-bottom: 0;
+}
+
+.service-input-row.inline-fields input {
+  flex: 1;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.service-description {
+  font-weight: 500;
+}
+
+.service-price {
+  background: #f0f9ff;
+  border-color: #bfdbfe;
+}
+
+.service-quantity {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.add_servico_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+#total-servicos-input {
+  width: 150px;
+  text-align: right;
+  margin-bottom: 0;
+  font-weight: 600;
+  background: #f8fafc;
+  border-color: var(--border);
+}
+
+/* ===== TABELAS ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: var(--space-sm);
+  text-align: center;
+  color: var(--text);
+}
+
+th {
+  background: #f0f0f0;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+table td:nth-child(2),
+table td:nth-child(5) {
+  text-align: right;
+}
+
+table td:nth-child(1) {
+  text-align: left;
+}
+
+table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ===== RESUMO DO ORÇAMENTO ===== */
+.quote-summary {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-md));
+  box-shadow: var(--shadow);
+}
+
+.quote-summary h3 {
+  color: var(--text);
+  margin-bottom: var(--space-md);
+  text-align: start;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: var(--space-sm);
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row.total {
+  font-weight: 600;
+  font-size: var(--font-lg);
+  color: var(--primary);
+  border-top: 2px solid var(--border);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+}
+
+#subtotal-display,
+#total-display {
+  font-weight: 600;
+  color: var(--success);
+}
+
+#services-count {
+  background: var(--primary);
+  color: white;
+  padding: 2px var(--space-sm);
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* ===== ESTADOS E ANIMAÇÕES ===== */
+.quote-summary:hover {
+  box-shadow: 0 4px 25px rgba(44, 62, 80, 0.12);
+}
+
+.summary-row span {
+  transition: all 0.2s ease;
+}
